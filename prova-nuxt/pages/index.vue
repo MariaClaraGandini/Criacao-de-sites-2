@@ -1,51 +1,37 @@
 <template>
-	<main>
-		<b-container class="pt-4">
-				<b-row>
-					<b-col cols="12">
-						<div>
-							<h1 class= "text-center">
-								Conheça nossa unidade!
-							</h1>
-							<p class="description text-center">
-							Fatec de Matão foi fundada em outubro de 2018, uma das 73 Unidades de Ensino
-							do Centro Estadual de Educação Tecnlológica Paula Souza, que são distribuidas
-							em 67 municípios paulista.
-							</p>
-						</div>
-					</b-col>
-				</b-row>
-					<b-row class="text-center mt-3">
-					<b-col cols="12" lg="4">
-						<div class="m-4">
-							<img src="" alt="Graduação" width="50" class="mt-3">
-							<h2 class="d-inline-flex pt-2 ">Missão</h2>
+  <div>
+    <Menu />
 
-							<p class="mt-3">
-								Oferecer educação <br>
-								gratuita e de qualidade <br>
-								para formar tecnológos <br>
-								na área da
-								AgroIndústria
-							</p>
-						</div>
-					</b-col>
-
-					<b-col cols="12" lg="4">
-						<div class="m-4">
-							<img src="" alt="Graduação" width="60" class="mt-3">
-							<h2 class="d-inline-flex pt-2">Visão</h2>
-
-							<p class="mt-3">
-							Consolidar-se como <br>
-							referência nacional na <br>
-							formação e capacitação <br>
-							profissional.
-							</p>
-						</div>
-					</b-col>
-
-					<b-col cols="12" lg="4">
-						<div class="m-4">
-							<img src="" alt="Valores da Fatec Matão" width="40" class="mt-3">
-							<h2 class="d-inline-flex pt-2 ">Valores</h2>
+    <main>
+      <div class="card mb-6 m-5" style="max-width: 1000px">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img
+              src="../static/macacao_lebhua.jpg"
+              class="img-fluid rounded-center"
+            />
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">MACACÃO LE BHUA</h5>
+              <p class="card-text price" style="font-size: 3rem">R$79,90</p>
+              <p class="card-text">
+                Descrição: Macacão de Bebê Longo Bordado da marca Le Bhua.
+                Confeccionado em tecido 100% algodão. Lindo macacão com detalhe
+                de camisa falsa, que deixa o macacão ainda mais luxuoso. Gola
+                polo, conta com abertura de cima na parte frontal e entre
+                pernas, o que ajuda na hora da mamãe vestir seu bebê. Lindo
+                bordado na altura do peito. Estampada da camisa com
+                coqueirinhos, o que deixa a peça ainda mais linda. Seu denguinho
+                com todo estilo e conforto.
+                <small class="text-muted">Last updated 3 mins ago</small>
+              </p>
+              <button type="button" class="btn btn-success">Comprar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <Footer />
+    </main>
+  </div>
+</template>
