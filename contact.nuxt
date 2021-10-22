@@ -1,0 +1,97 @@
+<template>
+  <div>
+    <main>
+      <Menu />
+
+      <form @submit.prevent="send">
+        <div class="p-2">
+          <label for="name" class="form-label pt-2 m-2">Nome Completo</label>
+          <input
+            v-model="name"
+            id="name"
+            class="form-control"
+            placeholder="Nome Completo"
+            :class="nameClass"
+          />
+        </div>
+        <div class="p-2">
+          <label for="email" class="form-label m-2">E-mail</label>
+          <input
+            v-model="email"
+            id="emaiL"
+            class="form-control"
+            placeholder="E-mail"
+            :class="emailClass"
+          />
+        </div>
+        <div class="p-2">
+          <label for="text" class="form-label m-2">Mensagem</label>
+          <textarea
+            v-model="text"
+            id="text"
+            class="form-control"
+            :class="textClass"
+          ></textarea>
+        </div>
+        <div class="p-2">
+          <button class="btn btn-success" type="submit">Enviar</button>
+        </div>
+      </form>
+
+      <p>{{ result }}</p>
+    </main>
+  </div>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      email: "",
+      emailClass: "",
+      message: "",
+      messageClass: "",
+      result: "",
+    };
+  },
+
+  methods: {
+    send() {
+      this.emailClass = "";
+      this.textClass = "";
+
+      if (!this.name) {
+        this.result = "Preencha o nome";
+        this.nameClass = "error";
+        return;
+      }
+      if (!this.email) {
+        this.result = "Preencha un e-mail válido";
+        this.emailClass = "error";
+        return;
+      }
+
+      if (!this.text) {
+        this.result = "Escreva uma mensagem";
+        this.TextClass = "error";
+        return;
+      }
+
+      this.result = "Enviado com sucesso";
+      this.email = "";
+      this.text = "";
+    },
+  },
+};
+</script>
+
+<style scoped>
+.error {
+  border: 1px solid red;
+}
+
+input,
+textarea {
+  width: 50%;
+}
+</style>
