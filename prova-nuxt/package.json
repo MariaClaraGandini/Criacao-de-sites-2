@@ -1,0 +1,21 @@
+{
+  "name": "prova-nuxt",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "build:framevuerk": "framevuerk-builder -c ./framevuerk-config.js",
+    "prepublish": "npm run build:framevuerk"
+  },
+  "dependencies": {
+    "core-js": "^3.15.1",
+    "framevuerk": "^2.4.2",
+    "nuxt": "^2.15.7"
+  },
+  "devDependencies": {
+    "framevuerk-builder": "^2.0.8"
+  }
+}
