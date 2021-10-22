@@ -35,3 +35,25 @@
     </main>
   </div>
 </template>
+
+<script scoped>
+export default {
+  data() {
+    return {
+      result: "",
+    };
+  },
+};
+</script>
+<style scoped>
+.card-title {
+  font-weight: 500;
+}
+img {
+  width: 230%;
+  width: 200%;
+}
+.price {
+  color: #df3b7f;
+}
+</style>
